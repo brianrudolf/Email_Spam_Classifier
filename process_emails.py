@@ -34,7 +34,7 @@ ham_subjects, ham_bodies = separate_subjects(ham_messages)
 spam_subjects, spam_bodies = separate_subjects(spam_messages)
 
 # Change directory to save processed emails
-os.chdir('/home/brian/ML_Projects/Email_Datasets/email_classifier')
+os.chdir(os.path.dirname(os.path.realpath(__file__)))
 
 clean_ham_subjects 	= clean_text(ham_subjects)
 pickle_out = open("clean_ham_subjects.pickle", 'wb')
